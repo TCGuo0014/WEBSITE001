@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <section>
+        <div class="header">
+          <div class="logo">
+            <img src="images/logo.png" alt="logo">
+          </div>
+          <div class="change-btn">
+            <div class="hilfe-container">
+              <div class="hilfe-icon">?</div>
+              <div>Hilfe</div>
+            </div>
+            <div class="language-btn">
+              <img src="images/change-btn.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="title">
+            <h1>VERIFIKATION VON GOETHE-ZERTIFIKATEN</h1>
+          </div>
+          <div class="text">
+            <p>
+              Auf dieser Seite können Sie die Echtheit von Goethe-Zertifikaten überprüfen. Geben Sie
+              hierzu die Daten
+              <strong>exakt</strong>
+              wie auf dem Zertifikat angegeben in das Online-Formular ein. Nach dem
+              Klick auf "Prüfen" erhalten Sie Auskunft, ob das Zertifikat gültig oder ungültig ist. In
+              Zweifelsfällen oder wenn das Zertifikat als ungültig ausgewiesen wird, schicken Sie uns
+              bitte einen Scan des Dokuments an:
+              <a target="_self" href="mailto:pruefungen@goethe.de" class="sapMLnk">pruefungen@goethe.de</a>
+            </p>
+          </div>
+          <div class="form">
+            <div class="msg1"></div>
+            <form action="">
+              <div class="select-container" id="dropdown-container">
+                <label for="country">Prüfungsniveau</label>
+                <input type="text" class="dropdown-input" placeholder="Bitte wählen" readonly required
+                  id="dropdown-input">
+                <div class="icon">&#9660;</div>
+                <div class="dropdown-list" id="dropdown-list">
+                  <div>A1: Start Deutsch 1</div>
+                  <div>A1: Fit in Deutsch 1</div>
+                  <div>A2</div>
+                  <div>B1</div>
+                  <div>B2</div>
+                  <div>C1</div>
+                  <div>C2</div>
+                </div>
+              </div>
+              <div class="select-container">
+                <label for="country">Vorname und Name</label>
+                <input type="text" class="dropdown-input" id="dropdown-input1" required>
+              </div>
+              <div class="select-container">
+                <label for="country">Geburtsdatum</label>
+                <div class="date-input-container">
+                  <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input">
+                  <div alt="Calendar" class="calendar-icon" id="calendar-icon" required>&#128197;</div>
+                </div>
+              </div>
+              <div class="select-container">
+                <label for="country">Geburtsort</label>
+                <input type="text" class="dropdown-input" id="dropdown-input2" required>
+              </div>
+              <div class="select-container">
+                <div class="info-box">
+                  <div class="info-icon">i</div>
+                  <div class="info-content">
+                    <p>Bitte füllen Sie die nachstehenden Eingabefelder gemäß dem Ihnen vorliegenden
+                      Goethe-Zertifikat aus. Eingabefelder, die auf dem Zertifikat nicht
+                      aufgeführt
+                      sind, lassen Sie bitte leer.
+                    </p>
+                    <p>
+                      Bitte beachten Sie, dass bei der Prüfung A1: Start Deutsch 1 die Reihenfolge
+                      abweicht: Hören, Lesen, Schreiben, Sprechen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="select-container">
+                <label for="country">Prüfungsdatum Zeugniskopf</label>
+                <div class="date-input-container">
+                  <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input1">
+                  <div alt="Calendar" class="calendar-icon" id="calendar-icon1" required>&#128197;</div>
+                </div>
+              </div>
+              <div class="select-container">
+                <span>Ergebnis</span>
+                <div class="box">
+                  <div class="box-container">
+                    <label for="country">Lesen</label>
+                    <div class="box-left">
+                      <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input2">
+                      <div alt="Calendar" class="calendar-icon" id="calendar-icon2" required>&#128197;</div>
+                    </div>
+                    <div class="box-right">
+                      <label for="country">Erreichte Punktezahl</label>
+                      <input type="Nummer" class="right-input">
+                    </div>
+                  </div>
+                  <div class="box-container">
+                    <label for="country">Hören</label>
+                    <div class="box-left">
+                      <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input3">
+                      <div alt="Calendar" class="calendar-icon" id="calendar-icon3">&#128197;</div>
+                    </div>
+                    <div class="box-right">
+                      <label for="country">Erreichte Punktezahl</label>
+                      <input type="Nummer" class="right-input">
+                    </div>
+                  </div>
+                  <div class="box-container">
+                    <label for="country">Schreiben</label>
+                    <div class="box-left">
+                      <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input4">
+                      <div alt="Calendar" class="calendar-icon" id="calendar-icon4">&#128197;</div>
+                    </div>
+                    <div class="box-right">
+                      <label for="country">Erreichte Punktezahl</label>
+                      <input type="Nummer" class="right-input">
+                    </div>
+                  </div>
+                  <div class="box-container">
+                    <label for="country">Sprechen</label>
+                    <div class="box-left">
+                      <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input5">
+                      <div alt="Calendar" class="calendar-icon" id="calendar-icon5">&#128197;</div>
+                    </div>
+                    <div class="box-right">
+                      <label for="country">Erreichte Punktezahl</label>
+                      <input type="Nummer" class="right-input">
+                    </div>
+                  </div>
+                  <div class="box-container">
+                    <label for="country">Gesamtpunkte</label>
+                    <div class="box-left" style="visibility: hidden;">
+                      <!-- 隐藏 -->
+                      <input type="text" class="date-input" placeholder="TT.MM.JJJJ" id="date-input6">
+                      <div alt="Calendar" class="calendar-icon" id="calendar-icon6">&#128197;</div>
+                    </div>
+                    <div class="box-right">
+                      <label for="country">Erreichte Punktezahl</label>
+                      <input type="Nummer" class="right-input ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="select-container">
+                <label for="country">Nummer</label>
+                <input type="Nummer" class="dropdown-input" id="dropdown-input3" required>
+              </div>
+              <div class="msg2"></div>
+              <div class="btn-end">
+                <button type="reset" class="btn-reset">Zurücksetzen</button>
+                <button type="submit" class="btn-sumbit" id="submit">Prüfen</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer">
+          <ul>
+            <li><a href="https://www.goethe.de/de/imp.html">Impressum</a></li>
+            <li><a href="https://www.goethe.de/de/dat.html">Datenschutz</a></li>
+            <li><a href="https://www.goethe.de/de/spr/prf/nsb.html">Nutzungsbedingungen</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const dropdownInput = document.getElementById('dropdown-input');
+      const dropdownList = document.getElementById('dropdown-list');
+      const dropdownContainer = document.getElementById('dropdown-container');
+
+      dropdownInput.addEventListener('click', function () {
+        const isOpen = dropdownList.style.display === 'block';
+        dropdownList.style.display = isOpen ? 'none' : 'block';
+      });
+
+      document.querySelectorAll('.dropdown-list div').forEach(option => {
+        option.addEventListener('click', function () {
+          dropdownInput.value = this.textContent;
+          dropdownList.style.display = 'none';
+        });
+      });
+
+      // Close dropdown if clicked outside
+      window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-input') && !event.target.matches('.icon')) {
+          dropdownList.style.display = 'none';
+        }
+      });
+
+      // Date Picker
+      const dateInput = document.getElementById("date-input");
+      const calendarIcon = document.getElementById("calendar-icon");
+
+      const fp = flatpickr(dateInput, {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        onClose: function (selectedDates, dateStr, instance) {
+          dateInput.value = dateStr;
+          calendarIcon.classList.remove('active'); // 选择日期后移除激活状态
+        }
+      });
+
+      calendarIcon.onclick = function () {
+        fp.open();
+        calendarIcon.classList.toggle('active'); // 切换激活状态
+      };
+
+      // Date Picker1
+      const dateInput1 = document.getElementById("date-input1");
+      const calendarIcon1 = document.getElementById("calendar-icon1");
+
+      const fp1 = flatpickr(dateInput1, {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        onClose: function (selectedDates, dateStr, instance) {
+          dateInput1.value = dateStr;
+          calendarIcon1.classList.remove('active1'); // 选择日期后移除激活状态
+        }
+      });
+
+      calendarIcon1.onclick = function () {
+        fp1.open();
+        calendarIcon1.classList.toggle('active1'); // 切换激活状态
+      };
+      // Date Picker2
+      const dateInput2 = document.getElementById("date-input2");
+      const calendarIcon2 = document.getElementById("calendar-icon2");
+
+      const fp2 = flatpickr(dateInput2, {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        onClose: function (selectedDates, dateStr, instance) {
+          dateInput2.value = dateStr;
+          calendarIcon2.classList.remove('active'); // 选择日期后移除激活状态
+        }
+      });
+
+      calendarIcon2.onclick = function () {
+        fp2.open();
+        calendarIcon2.classList.toggle('active'); // 切换激活状态
+      };
+      // Date Picker1
+      const dateInput3 = document.getElementById("date-input3");
+      const calendarIcon3 = document.getElementById("calendar-icon3");
+
+      const fp3 = flatpickr(dateInput3, {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        onClose: function (selectedDates, dateStr, instance) {
+          dateInput3.value = dateStr;
+          calendarIcon3.classList.remove('active'); // 选择日期后移除激活状态
+        }
+      });
+
+      calendarIcon3.onclick = function () {
+        fp3.open();
+        calendarIcon3.classList.toggle('active'); // 切换激活状态
+      };
+      // Date Picker1
+      const dateInput4 = document.getElementById("date-input4");
+      const calendarIcon4 = document.getElementById("calendar-icon4");
+
+      const fp4 = flatpickr(dateInput4, {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        onClose: function (selectedDates, dateStr, instance) {
+          dateInput4.value = dateStr;
+          calendarIcon4.classList.remove('active'); // 选择日期后移除激活状态
+        }
+      });
+
+      calendarIcon4.onclick = function () {
+        fp4.open();
+        calendarIcon4.classList.toggle('active'); // 切换激活状态
+      };
+      // Date Picker1
+      const dateInput5 = document.getElementById("date-input5");
+      const calendarIcon5 = document.getElementById("calendar-icon5");
+
+      const fp5 = flatpickr(dateInput5, {
+        dateFormat: "d.m.Y",
+        allowInput: true,
+        onClose: function (selectedDates, dateStr, instance) {
+          dateInput5.value = dateStr;
+          calendarIcon5.classList.remove('active'); // 选择日期后移除激活状态
+        }
+      });
+
+      calendarIcon5.onclick = function () {
+        fp5.open();
+        calendarIcon5.classList.toggle('active'); // 切换激活状态
+      };
+
+
+
+
+
+
+
+      //提交
+      document.getElementById('submit').addEventListener('click', function (event) {
+        event.preventDefault(); // 阻止表单默认提交行为
+
+        // 获取所有需要校验的输入框
+        const inputs = document.querySelectorAll('.dropdown-input');
+        
+
+        const dateInput = document.getElementById('date-input');
+        const dateInput1 = document.getElementById('date-input1');
+        const dateInputs = [
+          document.getElementById('date-input2'),
+          document.getElementById('date-input3'),
+          document.getElementById('date-input4'),
+          document.getElementById('date-input5')
+        ];
+        const rightInputs = document.querySelectorAll('.right-input');
+
+        const msg1 = document.querySelector('.msg1');
+        const msg2 = document.querySelector('.msg2');
+
+
+
+        if (inputs.length == 4 && dateInput.value != '' && dateInput1.value != '' && dateInputs.length >= 1 && rightInputs.length >= 1) {
+          
+
+          msg1.innerHTML = `
+                    <div class="status">
+                        <span class="msg-icon">✔</span>
+                        <span>Das Zertifikat ist gültig</span>
+                    </div>`;
+          msg2.innerHTML = `
+                    <div class="status">
+                        <span class="msg-icon">✔</span>
+                        <span>Das Zertifikat ist gültig</span>
+                    </div>`;
+        } else {
+          alert('请正确填写信息');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+
+}
+
+.main {
+    margin: 0 auto;
+    width: 1280px;
+    height: 100vh;
+}
+
+section {
+    width: 1280px;
+    height: 100vh;
+    overflow-y: scroll;
+    /* 添加垂直滚动条 */
+    overflow-x: hidden;
+}
+
+section::-webkit-scrollbar {
+    /* 针对WebKit浏览器 */
+    width: 12px;
+    /* 滚动条宽度 */
+}
+
+section::-webkit-scrollbar-track {
+    /* 滚动条轨道 */
+    background: #f1f1f1;
+    /* 轨道颜色 */
+}
+
+section::-webkit-scrollbar-thumb {
+    /* 滚动条滑块 */
+    background: #888;
+    /* 滑块颜色 */
+}
+
+section::-webkit-scrollbar-thumb:hover {
+    /* 滑块hover效果 */
+    background: #555;
+    /* 滑块hover颜色 */
+}
+.header{
+    width: 1280px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    margin: auto 1rem !important;
+}
+
+.change-btn {
+    margin: auto 1rem !important;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hilfe-container {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #007BFF;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.hilfe-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0861c0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.hilfe-container:hover {
+    background-color: #E9F1FF;
+    border: 1px solid #007BFF;
+}
+
+.change-btn-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 178);
+    text-align: center;
+    color: white;
+    font-weight: 1000;
+}
+
+.language-btn{
+    margin: auto 1rem !important;
+    width: 70px;
+    height: 30px;
+}
+.language-btn img {
+
+    width: 70px;
+    height: 30px;
+}
+.content{
+    width: 800px;
+    margin: 0 auto;
+}
+.title{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+h1{
+    margin: 25px 0;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: bold;
+}
+.text{
+    width: 100%;
+    height: 120px;
+}
+.text p{
+    font-size: 17px;
+    line-height: 24px;
+    color: #0e2029;
+    opacity: 64%;
+}
+.text a{
+    color: #197eea;
+}
+.text a:hover{
+    
+    text-decoration: underline;
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+}
+.select-container>label{
+    display: block;
+    margin: 5px 0;
+}
+.dropdown-input {
+    width: 100%;
+    outline: none;
+    padding: 8px 0px 8px 8px;
+    border: 1px solid #005B7F;
+
+    background: transparent;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.dropdown-list div {
+    padding: 8px 8px 0 8px;
+    cursor: pointer;
+}
+
+.dropdown-list div:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    top: 33px;
+    right: -10px;
+    pointer-events: none;
+    transition: background-color 0.3s;
+    z-index: -1; /* Keep behind the dropdown */
+}
+
+.select-container:focus-within .icon {
+    width: 32px;
+    height: 32px;
+    background-color: #007BFF; /* Icon color on focus */
+}
+
+
+.info-box {
+    width: 100%;
+    border: 1px solid #007BFF;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.info-icon {
+    width: 15px;
+    height: 15px;
+    color: #007BFF;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+    border: 2px solid #007BFF;
+}
+
+.info-content {
+    margin-left: 40px;
+    color: #333;
+}
+.info-content p{
+    margin: 10px 0;
+}
+
+.date-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+}
+
+.date-input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #005B7F;
+    outline: none;
+    flex-grow: 1;
+    font-style: italic;
+    color: #909090;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-icon.active {
+    background-color: #007BFF; /* 点击后背景颜色变蓝 */
+}
+
+.box{
+    width: 100%;
+    margin: 10 auto;
+    padding-left: 20px;
+
+}
+.box-container{
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+}
+.box-container label{
+    width: 120px;
+    font-size: 14px;
+    text-align: left;
+}
+.box-left{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    width: 30%;
+}
+.box-right{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: 60%;
+    height: 30px;
+}
+.box-right label{
+    margin-left: 20px;
+    white-space: nowrap;
+    width: 150px;
+    height: 30px;
+}
+.right-input{
+    margin-left: 20px;
+    width: 240px;
+    outline: none;
+    padding: 8px 0px 8px 8px;
+    border: 1px solid #005B7F;
+    appearance: none;
+    background: transparent;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+.msg1{
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+}
+.msg2{
+    width: 300px;
+    height: 50px;
+}
+
+.status {
+    font-family: Arial, sans-serif;
+    color: #4CAF50; /* 绿色 */
+}
+
+.btn-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #007BFF;
+    transition: background-color 0.3s, border 0.3s;
+    margin: 20px 0;
+}
+
+.btn-reset{
+    border-radius: 5px;
+    border: 1px solid #007BFF;
+    color: #007BFF;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+.btn-sumbit {
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #0861c0;
+    border: 1px solid #007BFF;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn-reset:hover{
+    background-color: #E9F1FF;
+}
+.btn-sumbit:hover {
+    
+    background-color: #1560e2;
+}
+
+
+
+
+.footer{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+ul{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    margin: 0 10px;
+}
+li a{
+    color: #197eea;
+}
+li a:hover{
+    text-decoration: underline;
+}
